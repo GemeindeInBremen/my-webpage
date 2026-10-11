@@ -5,14 +5,18 @@
 <style>
 :root{--bg:#fff;--alt:#f5f5f5;--tx:#444;--hd:#222;--ac:#2a9d8f;--hero:#1b2a33;--bd:#e3e3e3}
 @media (prefers-color-scheme:dark){:root{--bg:#161b1e;--alt:#1d2428;--tx:#c9d1d5;--hd:#f1f1f1;--bd:#2c353a}}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.7 "Open Sans",Arial,sans-serif}
 h1,h3,h4,nav,.btn{font-family:Montserrat,Arial,sans-serif}
 html[data-l=de] .e,html[data-l=en] .d{display:none}
 nav{position:fixed;top:0;left:0;right:0;height:60px;background:rgba(27,42,51,.96);display:flex;align-items:center;justify-content:space-between;padding:0 18px;z-index:9;color:#fff}
 nav b{letter-spacing:2px;text-transform:uppercase;font-size:14px}
+.nr{display:flex;gap:10px}
 .lang{border:1px solid #fff;background:none;color:#fff;border-radius:3px;padding:4px 10px;font:600 12px Montserrat,Arial;cursor:pointer}
+#mp{display:none;position:fixed;top:60px;right:0;left:0;background:rgba(27,42,51,.98);padding:8px 18px 14px;z-index:8;max-height:calc(100vh - 60px);overflow:auto}
+#mp.o{display:block}
+#mp a{display:block;color:#fff;text-decoration:none;font:600 13px Montserrat,Arial;letter-spacing:1.5px;text-transform:uppercase;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.15)}
 .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:#fff;padding:90px 20px 40px;background:linear-gradient(rgba(10,20,26,.55),rgba(10,20,26,.75)),linear-gradient(135deg,#2a4a5a,#14222a)}
 .hero h1{font-size:clamp(34px,8vw,72px);line-height:1.1;margin:0 0 20px;text-transform:uppercase;letter-spacing:3px;font-weight:700}
 .hero p{font:600 18px Montserrat,Arial;letter-spacing:3px;text-transform:uppercase;margin:0}
@@ -24,14 +28,50 @@ h4{color:var(--hd);letter-spacing:1px;font-size:16px;margin:28px 0 6px}
 ul{padding-left:20px}li{margin:5px 0}a{color:var(--ac);word-break:break-all}
 figure{margin:26px 0;border:1px solid var(--bd);background:var(--bg);border-radius:4px;overflow:hidden}
 figure img{display:block;width:100%;height:auto}figcaption{padding:12px 16px;font-weight:600}
+.day{font:700 18px Montserrat,Arial;color:var(--hd);margin:30px 0 10px}
+.day:first-child{margin-top:0}
+.row{display:grid;grid-template-columns:118px 1fr;gap:12px;padding:8px 0;border-bottom:1px solid var(--bd)}
+.row .t{font:600 14px Montserrat,Arial;color:var(--ac);white-space:nowrap}
+.row .s{display:block}
+.sep{border:0;border-top:2px dotted var(--bd);margin:26px 0}
 footer{background:var(--hero);color:#cfd8dc;text-align:center;padding:36px 20px;font-size:14px}
 </style></head><body>
-<nav><b>Bremen</b><button class="lang" onclick="sw()" id="lb">EN</button></nav>
+<nav><b>Bremen</b><div class="nr"><button class="lang" onclick="mt()"><span class="d">Menü</span><span class="e">Menu</span></button><button class="lang" onclick="sw()" id="lb">EN</button></div></nav>
+<div id="mp" onclick="mt()">
+<a href="#schedule"><span class="d">Zeitplan</span><span class="e">Schedule</span></a>
+<a href="#news"><span class="d">Neue Informationen</span><span class="e">New Information</span></a>
+<a href="#arrival"><span class="d">Ankommen</span><span class="e">Arrival</span></a>
+<a href="#previous"><span class="d">Bisherige Ankündigungen</span><span class="e">Previous Announcements</span></a>
+<a href="#parking"><span class="d">Parkinformationen</span><span class="e">Parking Information</span></a>
+<a href="#help"><span class="d">Weitere Mithilfe</span><span class="e">Additional Help Needed</span></a>
+</div>
 
 <header class="hero"><h1>Die Gemeinde in Bremen</h1>
 <p><span class="d">18.10.2026</span><span class="e">October 18, 2026</span></p></header>
 
-<section><div class="w">
+<section id="schedule"><div class="w">
+<div class="day">17.Oct. Saturday：</div>
+<div class="row"><span class="t">12:00-13:00</span><span>New ones baptism</span></div>
+<div class="row"><span class="t">14:00-17:00</span><span>Blending time in household
+<span class="s">Family Chai</span><span class="s">Family Khaled</span><span class="s">Family König</span><span class="s">Family Nosenko</span><span class="s">Family Pardedes</span><span class="s">Family Pogorelov</span><span class="s">Family Wu</span><span class="s">Sister houses</span>
+<span class="s">Contact: Brother Ethaniel +49 162 2472282</span><!-- 補充 -->
+</span></div>
+<hr class="sep">
+<div class="day">18.Oct. LD</div>
+<div class="row"><span class="t">09:00</span><span>Early arrival for preparations</span></div><!-- 補充 -->
+<div class="row"><span class="t">10:00-10:30</span><span>prayer</span></div>
+<div class="row"><span class="t">10:30-11:10</span><span>LT</span></div>
+<div class="row"><span class="t">11:10-11:40</span><span><span class="s">- Church growth *8 min</span><span class="s">- Testimony * 22 min</span><span class="s">(translation on zoom)</span></span></div>
+<div class="row"><span class="t">11:40-12:25</span><span><b>Encouragement from coworkers</b></span></div>
+<div class="row"><span class="t">12:25-12:30</span><span>Announcement</span></div>
+<div class="row"><span class="t">12:30-12:45</span><span>Photo &amp; Video</span></div>
+<div class="row"><span class="t">12:45-14:00</span><span>Love feast
+<span class="s">Water and lunch packages</span><!-- 補充 -->
+</span></div>
+<div class="row"><span class="t">14:00-15:00</span><span>Clean up</span></div>
+</div></section>
+
+<section id="news"><div class="w">
 <p><span class="d">Liebe Geschwister,</span><span class="e">Dear saints,</span></p>
 <p><span class="d">die folgende E-Mail wurde an die angemeldeten Geschwister für die Versammlung am <b>18.10.2026</b> verschickt. Wir teilen sie auch hier zur Information.</span><span class="e">The following email has been sent to the registered saints for the meeting on <b>October 18, 2026</b>. We are also sharing it here for your information.</span></p>
 
@@ -46,7 +86,7 @@ footer{background:var(--hero);color:#cfd8dc;text-align:center;padding:36px 20px;
 <h4><span class="d">2. Weiterleitung:</span><span class="e">2. Forwarding:</span></h4>
 <p><span class="d">Falls ihr andere Geschwister angemeldet habt, die diese E-Mail nicht direkt erhalten haben, leitet die Informationen bitte an sie weiter, damit alle angemeldeten Geschwister informiert sind.</span><span class="e">If you have registered other saints who did not receive this email directly, please forward this information to them so that all registered saints are informed.</span></p>
 
-<h4><span class="d">3. Ankommen:</span><span class="e">3. Arrival:</span></h4>
+<h4 id="arrival"><span class="d">3. Ankommen:</span><span class="e">3. Arrival:</span></h4>
 <ul>
 <li><span class="d">Geschwister, die bei den Vorbereitungen helfen möchten, können gerne <b>bereits um 9:00 Uhr</b> kommen. Die Gebetszeit für die Brüder beginnt um <b>10:00 Uhr</b>.</span><span class="e">Saints who would like to help with the preparations are welcome to arrive <b>as early as 9:00 AM</b>. The brothers' prayer time will begin at <b>10:00 AM</b>.</span></li>
 <li><span class="d"><b>Anfahrt:</b> Mit der Straßenbahn 1 bis zur Haltestelle <b>Berliner Freiheit</b> fahren. Anschließend durch das Einkaufszentrum gehen und am hinteren Ausgang nach rechts abbiegen.</span><span class="e"><b>Directions:</b> Take tram line 1 to <b>Berliner Freiheit</b>. Walk through the shopping center and turn right at the rear exit.</span></li>
@@ -62,7 +102,7 @@ footer{background:var(--hero);color:#cfd8dc;text-align:center;padding:36px 20px;
 <p><span class="d">Die Vermengungszeit findet von <b>14:00 bis 17:00 Uhr</b> statt.</span><span class="e">The blending time will take place from <b>2:00 PM to 5:00 PM</b>.</span></p>
 </div></section>
 
-<section><div class="w">
+<section id="previous"><div class="w">
 <h3><span class="d">Bisherige Ankündigungen</span><span class="e">Previous Announcements</span></h3>
 
 <h4><span class="d">1. Stornierung:</span><span class="e">1. Cancellation:</span></h4>
@@ -84,7 +124,7 @@ footer{background:var(--hero);color:#cfd8dc;text-align:center;padding:36px 20px;
 <p><span class="d">Für <b>Englisch, Chinesisch und Russisch</b> wird eine Übersetzung über <b>Zoom</b> angeboten. Bitte bringt ein <b>eigenes Smartphone und Kopfhörer</b> mit.</span><span class="e">Translation into <b>English, Chinese, and Russian</b> will be available via <b>Zoom</b>. Please bring your <b>own smartphone and headphones</b>.</span></p>
 </div></section>
 
-<section><div class="w">
+<section id="parking"><div class="w">
 <h3><span class="d">Parkinformationen</span><span class="e">Parking Information</span></h3>
 <ul>
 <li>Parkdeck Berliner Freiheit:<br><a href="https://maps.app.goo.gl/2sn2U1Ya9gwyFsM66" target="_blank" rel="noopener">https://maps.app.goo.gl/2sn2U1Ya9gwyFsM66</a></li>
@@ -96,7 +136,7 @@ footer{background:var(--hero);color:#cfd8dc;text-align:center;padding:36px 20px;
 <p><span class="d">Es gibt einen direkten Zugang durch das Einkaufszentrum von der 1. Etage (siehe Bilder in der E-Mail).</span><span class="e">There is direct access through the shopping center from the first floor (see pictures in the email).</span></p>
 </div></section>
 
-<section><div class="w">
+<section id="help"><div class="w">
 <h3><span class="d">Weitere Mithilfe</span><span class="e">Additional Help Needed</span></h3>
 <p><span class="d">Wir benötigen hauptsächlich noch Unterstützung bei der <b>Platzanweisung</b>.</span><span class="e">We mainly still need assistance with <b>ushering</b>.</span></p>
 <p><span class="d">Wer mithelfen möchte, kann sich gerne über das folgende Formular anmelden:</span><span class="e">Those who would like to help can register using the following form:</span></p>
@@ -106,6 +146,7 @@ footer{background:var(--hero);color:#cfd8dc;text-align:center;padding:36px 20px;
 <footer><span class="d">Mit überströmender Gnade des Herrn,<br>Die Brüder in Bremen</span><span class="e">With the Lord's overflowing grace,<br>The brothers in Bremen</span></footer>
 
 <script>
+function mt(){document.getElementById('mp').classList.toggle('o')}
 function sw(){var h=document.documentElement,l=h.dataset.l==='de'?'en':'de';h.dataset.l=l;h.lang=l;document.getElementById('lb').textContent=l==='de'?'EN':'DE';try{localStorage.setItem('l',l)}catch(e){}}
 try{if(localStorage.getItem('l')==='en')sw()}catch(e){}
 </script></body></html>
