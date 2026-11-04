@@ -21,6 +21,7 @@ nav b{letter-spacing:2px;text-transform:uppercase;font-size:14px}
 .hero h1{font-size:clamp(34px,8vw,72px);line-height:1.1;margin:0 0 20px;text-transform:uppercase;letter-spacing:3px;font-weight:700}
 .hero p{font:600 18px Montserrat,Arial;letter-spacing:3px;text-transform:uppercase;margin:0}
 .btn{display:inline-block;background:var(--ac);color:#fff;padding:11px 28px;text-decoration:none;letter-spacing:1px;font-size:13px;border-radius:3px;word-break:break-all}
+.vb{display:block;max-width:520px;margin:0 0 14px;text-align:center;line-height:1.5;padding:14px 20px;word-break:normal}
 section{padding:70px 20px}section:nth-of-type(even){background:var(--alt)}
 .w{max-width:860px;margin:0 auto}
 h3{color:var(--hd);text-transform:uppercase;letter-spacing:2px;font-size:26px;margin:0 0 22px}
@@ -42,16 +43,28 @@ footer{background:var(--hero);color:#cfd8dc;text-align:center;padding:36px 20px;
 </style></head><body>
 <nav><b>Bremen</b><div class="nr"><button class="lang" onclick="mt()"><span class="d">Menü</span><span class="e">Menu</span></button><button class="lang" onclick="sw()" id="lb">EN</button></div></nav>
 <div id="mp" onclick="mt()">
+<a href="#videos"><span class="d">Videoaufnahmen</span><span class="e">Video recordings</span></a>
 <a href="#schedule"><span class="d">Zeitplan</span><span class="e">Schedule</span></a>
 <a href="#news"><span class="d">Neue Informationen</span><span class="e">New Information</span></a>
 <a href="#arrival"><span class="d">Ankommen</span><span class="e">Arrival</span></a>
 <a href="#previous"><span class="d">Bisherige Ankündigungen</span><span class="e">Previous Announcements</span></a>
 <a href="#parking"><span class="d">Parkinformationen</span><span class="e">Parking Information</span></a>
 <a href="#help"><span class="d">Weitere Mithilfe</span><span class="e">Additional Help Needed</span></a>
+<a href="events.html"><span class="d">Termine</span><span class="e">Events</span></a>
 </div>
 
 <header class="hero"><h1>Die Gemeinde in Bremen</h1>
-<p><span class="d">18.10.2026</span><span class="e">October 18, 2026</span></p></header>
+<p><span class="d">18.10.2026</span><span class="e">October 18, 2026</span></p>
+<div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+<a class="btn" href="#videos"><span class="d">Videoaufnahmen</span><span class="e">Video recordings</span></a>
+<a class="btn" href="events.html"><span class="d">Termine &amp; Wöchentliche Treffen</span><span class="e">Events &amp; Weekly meetings</span></a>
+</div></header>
+
+<section id="videos"><div class="w">
+<h3><span class="d">Videoaufnahmen</span><span class="e">Video recordings</span></h3>
+<a class="btn vb" href="https://drive.google.com/file/d/1norZKUxVUVLDp_PSkUceueDiT5VNNx_D/view?usp=drivesdk" target="_blank" rel="noopener"><span class="d">Gekürzte Version mit englischen Untertiteln</span><span class="e">Edited version with English subtitles</span></a>
+<a class="btn vb" href="https://www.youtube.com/watch?v=acplJIPG-lw&amp;list=PLT7_VpuYznPTO-eVJ6Pxz4Lftq49OYtG2" target="_blank" rel="noopener"><span class="d">Vollversion im Originalton ohne Untertitel (4 Videos)</span><span class="e">Full-length original audio without subtitles (4 videos)</span></a>
+</div></section>
 
 <section id="schedule"><div class="w">
 <div class="day"><span class="d">17.10. Samstag:</span><span class="e">17.Oct. Saturday：</span></div>
