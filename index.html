@@ -20,6 +20,8 @@ nav b{letter-spacing:2px;text-transform:uppercase;font-size:14px}
 .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:#fff;padding:90px 20px 40px;background:linear-gradient(rgba(10,20,26,.55),rgba(10,20,26,.75)),linear-gradient(135deg,#2a4a5a,#14222a)}
 .hero h1{font-size:clamp(34px,8vw,72px);line-height:1.1;margin:0 0 20px;text-transform:uppercase;letter-spacing:3px;font-weight:700}
 .hero p{font:600 18px Montserrat,Arial;letter-spacing:3px;text-transform:uppercase;margin:0}
+.hb{display:flex;flex-direction:column;align-items:center}
+.badge{display:inline-block;background:#e63946;color:#fff;font:700 11px Montserrat,Arial;letter-spacing:1.5px;padding:3px 9px;border-radius:3px;margin-bottom:8px}
 .btn{display:inline-block;background:var(--ac);color:#fff;padding:11px 28px;text-decoration:none;letter-spacing:1px;font-size:13px;border-radius:3px;word-break:break-all}
 .vb{display:block;max-width:520px;margin:0 0 14px;text-align:center;line-height:1.5;padding:14px 20px;word-break:normal}
 section{padding:70px 20px}section:nth-of-type(even){background:var(--alt)}
@@ -27,6 +29,8 @@ section{padding:70px 20px}section:nth-of-type(even){background:var(--alt)}
 h3{color:var(--hd);text-transform:uppercase;letter-spacing:2px;font-size:26px;margin:0 0 22px}
 h4{color:var(--hd);letter-spacing:1px;font-size:16px;margin:28px 0 6px}
 ul{padding-left:20px}li{margin:5px 0}a{color:var(--ac);word-break:break-all}
+.vs{border-left:4px solid var(--ac);padding:2px 0 2px 16px;margin:28px 0 0}
+.vs p{margin:0 0 14px}
 figure{margin:26px 0;border:1px solid var(--bd);background:var(--bg);border-radius:4px;overflow:hidden}
 figure img{display:block;width:100%;height:auto}figcaption{padding:12px 16px;font-weight:600}
 .day{font:700 18px Montserrat,Arial;color:var(--hd);margin:30px 0 10px}
@@ -35,35 +39,40 @@ figure img{display:block;width:100%;height:auto}figcaption{padding:12px 16px;fon
 .row .t{font:600 14px Montserrat,Arial;color:var(--ac);white-space:nowrap}
 .row .s{display:block}
 .sep{border:0;border-top:2px dotted var(--bd);margin:26px 0}
-.hl{border:2px solid var(--ac);background:rgba(42,157,143,.12);border-radius:6px;padding:12px 14px;margin:12px 0}
-.hl .badge{display:inline-block;background:#e63946;color:#fff;font:700 11px Montserrat,Arial;letter-spacing:1.5px;padding:3px 9px;border-radius:3px;margin-bottom:10px}
-.hl .btn{margin-bottom:6px}
-.hl .row:last-child{border-bottom:0}
 footer{background:var(--hero);color:#cfd8dc;text-align:center;padding:36px 20px;font-size:14px}
 </style></head><body>
 <nav><b>Bremen</b><div class="nr"><button class="lang" onclick="mt()"><span class="d">Menü</span><span class="e">Menu</span></button><button class="lang" onclick="sw()" id="lb">EN</button></div></nav>
 <div id="mp" onclick="mt()">
 <a href="#videos"><span class="d">Videoaufnahmen</span><span class="e">Video recordings</span></a>
+<a href="events.html"><span class="d">Termine</span><span class="e">Events</span></a>
 <a href="#schedule"><span class="d">Zeitplan</span><span class="e">Schedule</span></a>
 <a href="#news"><span class="d">Neue Informationen</span><span class="e">New Information</span></a>
 <a href="#arrival"><span class="d">Ankommen</span><span class="e">Arrival</span></a>
 <a href="#previous"><span class="d">Bisherige Ankündigungen</span><span class="e">Previous Announcements</span></a>
 <a href="#parking"><span class="d">Parkinformationen</span><span class="e">Parking Information</span></a>
 <a href="#help"><span class="d">Weitere Mithilfe</span><span class="e">Additional Help Needed</span></a>
-<a href="events.html"><span class="d">Termine</span><span class="e">Events</span></a>
 </div>
 
 <header class="hero"><h1>Die Gemeinde in Bremen</h1>
 <p><span class="d">18.10.2026</span><span class="e">October 18, 2026</span></p>
-<div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
-<a class="btn" href="#videos"><span class="d">Videoaufnahmen</span><span class="e">Video recordings</span></a>
-<a class="btn" href="events.html"><span class="d">Termine &amp; Wöchentliche Treffen</span><span class="e">Events &amp; Weekly meetings</span></a>
+<div style="margin-top:28px;display:flex;gap:18px;flex-wrap:wrap;justify-content:center;align-items:flex-end">
+<div class="hb"><span class="badge"><span class="d">NEU – AKTUALISIERT</span><span class="e">NEW – UPDATED</span></span><a class="btn" href="#videos"><span class="d">Videoaufnahmen</span><span class="e">Video recordings</span></a></div>
+<div class="hb"><span class="badge"><span class="d">NEU – AKTUALISIERT</span><span class="e">NEW – UPDATED</span></span><a class="btn" href="events.html"><span class="d">Termine &amp; Wöchentliche Treffen</span><span class="e">Events &amp; Weekly meetings</span></a></div>
 </div></header>
 
 <section id="videos"><div class="w">
+<span class="badge"><span class="d">NEU – AKTUALISIERT</span><span class="e">NEW – UPDATED</span></span>
 <h3><span class="d">Videoaufnahmen</span><span class="e">Video recordings</span></h3>
 <a class="btn vb" href="https://drive.google.com/file/d/1norZKUxVUVLDp_PSkUceueDiT5VNNx_D/view?usp=drivesdk" target="_blank" rel="noopener"><span class="d">Gekürzte Version mit englischen Untertiteln</span><span class="e">Edited version with English subtitles</span></a>
 <a class="btn vb" href="https://www.youtube.com/watch?v=acplJIPG-lw&amp;list=PLT7_VpuYznPTO-eVJ6Pxz4Lftq49OYtG2" target="_blank" rel="noopener"><span class="d">Vollversion im Originalton ohne Untertitel (4 Videos)</span><span class="e">Full-length original audio without subtitles (4 videos)</span></a>
+<div class="vs">
+<p class="e">At the end of Genesis, the gentile priest daughter, Asenath, married to Joseph, which signified Church married to Christ while He was abandoned by His people.</p>
+<p class="e">This very Christ, who is real Zaphenath-paneah, the secret revealer, the life supplier and the savior of the world.</p>
+<p class="e">In this age as in seven years of femine, Church especially in the gentile world, married to rich Christ, allow Him to be revealed much more.</p>
+<p class="d">Am Ende des 1. Buches Mose heiratete die Priestertochter aus den Nationen, Asenat, Joseph; das bedeutet, dass die Gemeinde mit Christus verheiratet ist, während Er von Seinem Volk verlassen war.</p>
+<p class="d">Dieser Christus ist der wirkliche Zafenat-Paneach, der Offenbarer des Geheimnisses, der Lebensspender und der Retter der Welt.</p>
+<p class="d">In diesem Zeitalter, wie in den sieben Jahren der Hungersnot, lässt die Gemeinde – besonders in der Welt der Nationen – verheiratet mit dem reichen Christus, zu, dass Er viel mehr offenbart wird.</p>
+</div>
 </div></section>
 
 <section id="schedule"><div class="w">
@@ -84,16 +93,13 @@ footer{background:var(--hero);color:#cfd8dc;text-align:center;padding:36px 20px;
 <div class="day"><span class="d">18.10. Tag des Herrn</span><span class="e">18.Oct. LD</span></div>
 <div class="row"><span class="t">08:00</span><span><span class="d">Frühes Kommen für die Vorbereitungen</span><span class="e">Early arrival for preparations</span></span></div><!-- 補充 -->
 <div class="row"><span class="t">10:00-10:30</span><span><span class="d">Gebet</span><span class="e">prayer</span></span></div>
-<div class="hl">
-<span class="badge"><span class="d">NEU – AKTUALISIERT</span><span class="e">NEW – UPDATED</span></span><br>
-<a class="btn" href="https://us06web.zoom.us/j/82362169381?pwd=gt2axZCMq4UlXKva3XgEzSkeYu11Ii.1" target="_blank" rel="noopener"><span class="d">Zoom: Versammlung &amp; Übersetzung</span><span class="e">Zoom: Meeting &amp; Translation</span></a>
+<a class="btn" style="margin:10px 0 6px" href="https://us06web.zoom.us/j/82362169381?pwd=gt2axZCMq4UlXKva3XgEzSkeYu11Ii.1" target="_blank" rel="noopener"><span class="d">Zoom: Versammlung &amp; Übersetzung</span><span class="e">Zoom: Meeting &amp; Translation</span></a>
 <div class="row"><span class="t">10:30-11:10</span><span><span class="d">Tisch des Herrn</span><span class="e">LT</span></span></div>
 <div class="row"><span class="t">11:10-11:40</span><span>
 <span class="s"><span class="d">- Gemeindewachstum *8 Min.</span><span class="e">- Church growth *8 min</span></span>
 <span class="s"><span class="d">- Zeugnis * 22 Min.</span><span class="e">- Testimony * 22 min</span></span>
 <span class="s"><span class="d">(Übersetzung über Zoom)</span><span class="e">(translation on zoom)</span></span></span></div>
 <div class="row"><span class="t">11:40-12:25</span><span><b><span class="d">Ermutigung von den Mitarbeitern</span><span class="e">Encouragement from coworkers</span></b></span></div>
-</div>
 <div class="row"><span class="t">12:25-12:30</span><span><span class="d">Ankündigungen</span><span class="e">Announcement</span></span></div>
 <div class="row"><span class="t">12:30-12:45</span><span><span class="d">Foto &amp; Video für Berichtserstellung</span><span class="e">Photo &amp; Video for reporting</span></span></div>
 <div class="row"><span class="t">12:45-14:00</span><span><span class="d">Liebesmahl</span><span class="e">Love feast</span>
