@@ -20,6 +20,9 @@ nav b{letter-spacing:2px;text-transform:uppercase;font-size:14px}
 .hero{min-height:55vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:#fff;padding:90px 20px 40px;background:linear-gradient(rgba(10,20,26,.55),rgba(10,20,26,.75)),linear-gradient(135deg,#2a4a5a,#14222a)}
 .hero h1{font-size:clamp(34px,8vw,72px);line-height:1.1;margin:0 0 20px;text-transform:uppercase;letter-spacing:3px;font-weight:700}
 .hero p{font:600 18px Montserrat,Arial;letter-spacing:3px;text-transform:uppercase;margin:0}
+.vw{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:26px}
+.vw a{border:2px solid #fff;color:#fff;text-decoration:none;padding:9px 18px;border-radius:3px;font:600 12px Montserrat,Arial;letter-spacing:1.5px;text-transform:uppercase;word-break:normal}
+.vw a.on{background:var(--ac);border-color:var(--ac)}
 .btn{display:inline-block;background:var(--ac);color:#fff;padding:11px 28px;text-decoration:none;letter-spacing:1px;font-size:13px;border-radius:3px;word-break:break-all}
 section{padding:70px 20px}section:nth-of-type(even){background:var(--alt)}
 .w{max-width:860px;margin:0 auto}
@@ -42,10 +45,17 @@ footer{background:var(--hero);color:#cfd8dc;text-align:center;padding:36px 20px;
 <a href="index.html"><span class="d">Startseite</span><span class="e">Home</span></a>
 <a href="#weekly"><span class="d">Wöchentliche Treffen</span><span class="e">Weekly meetings</span></a>
 <a href="#events"><span class="d">Termine</span><span class="e">Events</span></a>
+<a href="year.html"><span class="d">Jahreskalender</span><span class="e">Year calendar</span></a>
+<a href="table.html"><span class="d">Übersichtstabelle</span><span class="e">Overview table</span></a>
 </div>
 
 <header class="hero"><h1><span class="d">Termine</span><span class="e">Events</span></h1>
-<p><span class="d">Nov 2026 – Mär 2027</span><span class="e">Nov 2026 – Mar 2027</span></p></header>
+<p><span class="d">Nov 2026 – Mär 2027</span><span class="e">Nov 2026 – Mar 2027</span></p>
+<div class="vw">
+<a href="events.html" class="on"><span class="d">Listenansicht</span><span class="e">List view</span></a>
+<a href="year.html"><span class="d">Jahreskalender</span><span class="e">Year calendar</span></a>
+<a href="table.html"><span class="d">Übersichtstabelle</span><span class="e">Overview table</span></a>
+</div></header>
 
 <section id="weekly"><div class="w">
 <h3><span class="d">Wöchentliche Treffen</span><span class="e">Weekly meetings</span></h3>
