@@ -1,0 +1,133 @@
+<!DOCTYPE html><html lang="de" data-l="de"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Die Gemeinde in Bremen – Praktischer Dienst</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap">
+<style>
+:root{--bg:#fff;--alt:#f5f5f5;--tx:#444;--hd:#222;--ac:#2a9d8f;--hero:#1b2a33;--bd:#e3e3e3}
+@media (prefers-color-scheme:dark){:root{--bg:#161b1e;--alt:#1d2428;--tx:#c9d1d5;--hd:#f1f1f1;--bd:#2c353a}}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.7 "Open Sans",Arial,sans-serif}
+h1,h3,h4,nav,.btn{font-family:Montserrat,Arial,sans-serif}
+html[data-l=de] .e,html[data-l=en] .d{display:none}
+nav{position:fixed;top:0;left:0;right:0;height:60px;background:rgba(27,42,51,.96);display:flex;align-items:center;justify-content:space-between;padding:0 18px;z-index:9;color:#fff}
+nav b{letter-spacing:2px;text-transform:uppercase;font-size:14px}
+.nr{display:flex;gap:10px}
+.lang{border:1px solid #fff;background:none;color:#fff;border-radius:3px;padding:4px 10px;font:600 12px Montserrat,Arial;cursor:pointer}
+#mp{display:none;position:fixed;top:60px;right:0;left:0;background:rgba(27,42,51,.98);padding:8px 18px 14px;z-index:8;max-height:calc(100vh - 60px);overflow:auto}
+#mp.o{display:block}
+#mp a{display:block;color:#fff;text-decoration:none;font:600 13px Montserrat,Arial;letter-spacing:1.5px;text-transform:uppercase;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.15)}
+.hero{min-height:45vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:#fff;padding:90px 20px 40px;background:linear-gradient(rgba(10,20,26,.55),rgba(10,20,26,.75)),linear-gradient(135deg,#2a4a5a,#14222a)}
+.hero h1{font-size:clamp(32px,8vw,68px);line-height:1.1;margin:0 0 20px;text-transform:uppercase;letter-spacing:3px;font-weight:700}
+.hero p{font:600 18px Montserrat,Arial;letter-spacing:3px;text-transform:uppercase;margin:0}
+.btn{display:inline-block;background:var(--ac);color:#fff;padding:11px 28px;text-decoration:none;letter-spacing:1px;font-size:13px;border-radius:3px;word-break:break-all}
+.dc{display:block;max-width:680px;margin:8px 0;padding:10px 16px;word-break:normal;text-align:left;line-height:1.5}
+.dc.in{display:inline-block;margin:6px 8px 0 0}
+section{padding:60px 20px}section:nth-of-type(even){background:var(--alt)}
+.w{max-width:860px;margin:0 auto}
+h3{color:var(--hd);text-transform:uppercase;letter-spacing:2px;font-size:26px;margin:0 0 22px}
+a{color:var(--ac)}
+.sv{border:1px solid var(--bd);border-radius:6px;background:var(--bg);padding:12px 14px;margin-bottom:12px}
+.sh{font:700 15px Montserrat,Arial;color:var(--hd)}
+.pc{display:inline-block;background:var(--ac);color:#fff;font:700 12px Montserrat,Arial;padding:2px 8px;border-radius:3px;margin-right:6px}
+details{margin-top:22px}
+summary{cursor:pointer;font:600 13px Montserrat,Arial;color:var(--ac);letter-spacing:1px;text-transform:uppercase}
+iframe{width:100%;height:520px;border:1px solid var(--bd);border-radius:6px;margin-top:12px;background:#fff}
+footer{background:var(--hero);color:#cfd8dc;text-align:center;padding:36px 20px;font-size:14px}
+</style></head><body>
+<nav><b>Bremen</b><div class="nr"><button class="lang" onclick="mt()"><span class="d">Menü</span><span class="e">Menu</span></button><button class="lang" onclick="sw()" id="lb">EN</button></div></nav>
+<div id="mp" onclick="mt()">
+<a href="index.html"><span class="d">Startseite</span><span class="e">Home</span></a>
+<a href="#folder"><span class="d">Ordner</span><span class="e">Folder</span></a>
+<a href="#burden"><span class="d">Last</span><span class="e">Burden</span></a>
+<a href="#principles"><span class="d">Prinzipien</span><span class="e">Principles</span></a>
+<a href="#messages"><span class="d">Botschaften</span><span class="e">Messages</span></a>
+<a href="#services"><span class="d">Dienste</span><span class="e">Services</span></a>
+</div>
+
+<header class="hero"><h1><span class="d">Praktischer Dienst</span><span class="e">Practical service</span></h1>
+<p><span class="d">Dokumente &amp; Gruppen</span><span class="e">Documents &amp; groups</span></p></header>
+
+<section id="folder"><div class="w">
+<h3><span class="d">Ordner</span><span class="e">Folder</span></h3>
+<p><span class="d">Alle Dokumente der Migration-Training-Reihe in einem Ordner.</span><span class="e">All documents of the Migration training series in one folder.</span></p>
+<a class="btn dc in" id="fl" target="_blank" rel="noopener"><span class="d">Ordner in Google Drive öffnen</span><span class="e">Open folder in Google Drive</span></a>
+<a class="btn dc in" id="hb" target="_blank" rel="noopener">2022 Jun Handbook_complete.pdf</a>
+<span id="wc"></span>
+<details><summary><span class="d">Ordner hier direkt ansehen</span><span class="e">View the folder here</span></summary>
+<iframe id="fr" loading="lazy"></iframe></details>
+</div></section>
+
+<section id="burden"><div class="w">
+<h3><span class="d">Last</span><span class="e">Burden</span></h3><div id="c1"></div>
+</div></section>
+
+<section id="principles"><div class="w">
+<h3><span class="d">Prinzipien</span><span class="e">Principles</span></h3><div id="c2"></div>
+</div></section>
+
+<section id="messages"><div class="w">
+<h3><span class="d">Botschaften</span><span class="e">Messages</span></h3><div id="c3"></div>
+</div></section>
+
+<section id="services"><div class="w">
+<h3><span class="d">Dienste</span><span class="e">Services</span></h3><div id="c4"></div>
+</div></section>
+
+<footer><a href="index.html" style="color:#cfd8dc"><span class="d">Startseite</span><span class="e">Home</span></a></footer>
+
+<script>
+function mt(){document.getElementById('mp').classList.toggle('o')}
+function sw(){var h=document.documentElement,l=h.dataset.l==='de'?'en':'de';h.dataset.l=l;h.lang=l;document.getElementById('lb').textContent=l==='de'?'EN':'DE';try{localStorage.setItem('l',l)}catch(e){}}
+try{if(localStorage.getItem('l')==='en')sw()}catch(e){}
+
+/* === Hier Links eintragen / enter links here === */
+var FID="1aCNqMd_5dGeoIN3VvnWrJ1hs-KAuJFMk";
+var FOLDER="https://drive.google.com/drive/folders/"+FID;
+var WACOMM="";   /* Link der WhatsApp-Community / WhatsApp community link */
+var HANDBOOK=""; /* direkter Link / direct link */
+/* Dokument: ["Titel"] oder ["Titel","https://direkter-link"] oder ["Titel","","Suchbegriff"]
+   Document:  ["Title"] or ["Title","https://direct-link"] or ["Title","","search term"] */
+var BUR=[["Original burden part 1"],["Original burden part 2"]];
+var PRI=[["Becoming Patterns of the Flock"],["Living in the Fellowship of the Body"],["Serving in the Oneness of the Body"],["The One Accord and the Harmonious Coordination…"],["The Group Meetings in Mutuality"],["Having Morning Revival with Others"],["Opening Homes for the Gospel"],["Practicing the Priesthood of the Gospel in the Vital…"]];
+var MSG=[["Shepherding People according to the Lord's Heart …"],["The Organic Shepherding according to God in the …"],["The Complete View of Raising Up the New Believer…"],["Perfecting Others to Prophesy for Three Minutes"],["Building Up a Personal and Affectionate Relationsh…"],["The Increase of Groups and Districts for Propagati…"],["How to Take Care of the Affairs"],["Preparing the Right Kind of Reading Material for Di…"],["Conferences, Trainings, and Truth Education"]];
+/* Dienst: [Code, Name DE, Name EN, Dokumente, WhatsApp-Link] */
+var SV=[
+["P1","Bücherdienst","Book service",[["The Book Service"]],""],
+["P2","Kinderdienst","Children service",[["Children Service"]],""],
+["P3","Reinigung/Arrangement","Cleaning/Arrangements",[["Cleaning and Arrangements"]],""],
+["P4","Campusservice","Campus service",[["College Campus Service"]],""],
+["P5","Anmeldung","Registration",[],""],
+["P6","Verpflegungsdienst","Meal service",[["Meal Service"]],""],
+["P7","Gastgeben/Transport","Hospitality/Transportation",[["Hospitality and Transportation"]],""],
+["P8","Dienst an älteren Geschwistern","Elderly saints service",[["Elderly Saints Service"]],""],
+["P9","Brot&Kelch/Übersetzung","Bread&Cup/Translation",[["Preparation of Bread and Cup, and Translation Ser…"],["Preparation of Bread and Cup, and Translation Ser… (2)","","Preparation of Bread and Cup, and Translation"]],""],
+["P10","Taufe/Evangelium","Baptism/Gospel",[["Services Relating to Baptism"]],""],
+["P11","Schwesterndienst","Sisters service",[["Sisters Service"]],""],
+["P12","Finanzen/Gaben","Finance/Offering",[["The Management of Finances and the Service of O…"],["Budgeting, Having Statistics, and Reminding Servi…"]],""],
+["P13","YP-Dienst","YP service",[],""],
+["P14","Junge Erwachsene","Young adults",[],""],
+["P15","Aktivitäten","Activities",[],""],
+["P16","Elektrik/Ausstattung","Electric/Equipment",[],""],
+["","Tisch des Herrn","Lord's Table",[["The Lord's Table Meeting"]],""],
+["","Ankündigungen","Announcements",[],""],
+["","Allgemein","General",[],""]
+];
+
+function b(d,e){return '<span class="d">'+d+'</span><span class="e">'+e+'</span>'}
+function dl(x){return x[1]||'https://drive.google.com/drive/search?q='+encodeURIComponent((x[2]||x[0]).replace(/…/g,'').trim())}
+function db(x){return '<a class="btn dc" href="'+dl(x)+'" target="_blank" rel="noopener">'+x[0]+'</a>'}
+document.getElementById('fl').href=FOLDER;
+document.getElementById('hb').href=HANDBOOK||dl(["2022 Jun Handbook_complete"]);
+document.getElementById('fr').src='https://drive.google.com/embeddedfolderview?id='+FID+'#list';
+if(WACOMM)document.getElementById('wc').innerHTML='<a class="btn dc in" href="'+WACOMM+'" target="_blank" rel="noopener">WhatsApp</a>';
+document.getElementById('c1').innerHTML=BUR.map(db).join('');
+document.getElementById('c2').innerHTML=PRI.map(db).join('');
+document.getElementById('c3').innerHTML=MSG.map(db).join('');
+document.getElementById('c4').innerHTML=SV.map(function(s){
+var h='<div class="sv"><div class="sh">'+(s[0]?'<span class="pc">'+s[0]+'</span>':'')+b(s[1],s[2])+'</div>';
+h+=s[3].map(db).join('');
+if(s[4])h+='<a class="btn dc in" href="'+s[4]+'" target="_blank" rel="noopener">WhatsApp</a>';
+if(!s[3].length&&!s[4])h+='<div>—</div>';
+return h+'</div>'}).join('');
+</script></body></html>
